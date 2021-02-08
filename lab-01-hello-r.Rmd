@@ -1,12 +1,12 @@
 ---
 title: "Lab 01 - Hello R"
-author: "hadeel almutairه"
-date: "1/2/2021"
+author: "HADEEL almutairه"
+date: "1/2/2021 "
 
 output: html_document
 ---
 
-University ID:2201004073
+University ID:2201004073 
 
 ### Load packages
 
