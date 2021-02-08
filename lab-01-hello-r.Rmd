@@ -1,11 +1,12 @@
 ---
 title: "Lab 01 - Hello R"
-author: "Musab Isah"
-date: "1/26/2021"
+author: "hadeel almutairه"
+date: "1/2/2021"
+
 output: html_document
 ---
 
-University ID: 
+University ID:2201004073
 
 ### Load packages
 
@@ -13,7 +14,6 @@ University ID:
 library(tidyverse) 
 library(datasauRus)
 ```
-
 
 ### Lab Exercise
 
