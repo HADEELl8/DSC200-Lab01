@@ -211,9 +211,11 @@ Mean :54.27 Mean :47.83510<br />
 3rd Qu.:67.28 3rd Qu.:71.81078<br />
 Max. :98.29 Max. :99.69468</p>
 <pre><code>                # A tibble: 6 x 3</code></pre>
-<p>dataset x y <chr> <dbl> <dbl> 1 dino 55.4 97.2 2 dino 51.5 96.0 3 dino 46.2 94.5 4 dino 42.8 91.4 5 dino 40.8 88.3 6 dino 38.7 84.9 Task1 # A tibble: 13 x 2 dataset n * <chr> <int> 1 away 142 2 bullseye 142 3 circle 142 4 dino 142 5 dots 142 6 h_lines 142 7 high_lines 142 8 slant_down 142 9 slant_up 142 10 star 142 11 v_lines 142 12 wide_lines 142 13 x_shape 142</p>
-<p>Task2 # A tibble: 1 x 1 r <dbl> 1 -0.0645</p>
-<p>task3 # A tibble: 1 x 1 r <dbl> 1 -0.0630 Ex # A tibble: 1 x 1 r <dbl> 1 -0.0683</p>
+<p>dataset x y <chr> <dbl> <dbl> 1 dino 55.4 97.2 2 dino 51.5 96.0 3 dino 46.2 94.5س 4 dino 42.8 91.4 5 dino 40.8 88.3 6 dino 38.7 84.9 Task1 # A tibble: 13 x 2 dataset n * <chr> <int> 1 away 142 2 bullseye 142 3 circle 142 4 dino 142 5 dots 142 6 h_lines 142 7 high_lines 142 8 slant_down 142 9 slant_up 142 10 star 142 11 v_lines 142 12 wide_lines 142 13 x_shape 142</p>
+<p>Task2</p>
+<p>dino_data &lt;- datasaurus_dozen %&gt;% filter(dataset == “dino”) ggplot(data = dino_data, mapping = aes(x = x, y = y)) +geom_point() dino_data %&gt;%summarize(r = cor(x, y)) # A tibble: 1 x 1 r <dbl> 1 -0.0645</p>
+<p>task3</p>
+<p>star_data &lt;- datasaurus_dozen %&gt;%filter(dataset == “star”) ggplot(data = star_data, mapping = aes(x = x, y = y)) +geom_point() star_data &lt;- datasaurus_dozen %&gt;%filter(dataset == “star”) star_data %&gt;%summarize(r = cor(x, y)) # A tibble: 1 x 1 r <dbl> 1 -0.0630 Ex circle_data &lt;- datasaurus_dozen %&gt;%filter(dataset == “circle”) ggplot(data = circle_data, mapping = aes(x = x, y = y))+geom_point() circle_data &lt;- datasaurus_dozen %&gt;%filter(dataset == “circle”) circle_data %&gt;%summarize(r = cor(x, y)) # A tibble: 1 x 1 r <dbl> 1 -0.0683</p>
 </div>
 
 

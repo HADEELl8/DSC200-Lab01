@@ -2,8 +2,10 @@
 title: "Lab 01 - Hello R"
 author: "HADEEL almutairه"
 date: "1/2/2021 "
-
-output: html_document
+output: 
+  html_document: 
+    fig_width: 16
+    fig_height: 13
 ---
 
 University ID: 2201004073
@@ -30,7 +32,7 @@ answer for Ex1
   <chr>   <dbl> <dbl>
 1 dino     55.4  97.2
 2 dino     51.5  96.0
-3 dino     46.2  94.5
+3 dino     46.2  94.5س
 4 dino     42.8  91.4
 5 dino     40.8  88.3
 6 dino     38.7  84.9
@@ -53,17 +55,30 @@ Task1
 13 x_shape      142
 
 Task2
+
+dino_data <- datasaurus_dozen %>% filter(dataset == "dino")
+ggplot(data = dino_data, mapping = aes(x = x, y = y)) +geom_point()
+dino_data %>%summarize(r = cor(x, y))
 # A tibble: 1 x 1
         r
     <dbl>
 1 -0.0645
 
 task3
+
+star_data <- datasaurus_dozen %>%filter(dataset == "star")
+ggplot(data = star_data, mapping = aes(x = x, y = y)) +geom_point()
+star_data <- datasaurus_dozen %>%filter(dataset == "star")
+star_data %>%summarize(r = cor(x, y))
 # A tibble: 1 x 1
         r
     <dbl>
 1 -0.0630
 Ex
+circle_data <- datasaurus_dozen %>%filter(dataset == "circle")
+ggplot(data = circle_data, mapping = aes(x = x, y = y))+geom_point()
+circle_data <- datasaurus_dozen %>%filter(dataset == "circle")
+circle_data %>%summarize(r = cor(x, y))
 # A tibble: 1 x 1
         r
     <dbl>
