@@ -74,7 +74,7 @@ star_data %>%summarize(r = cor(x, y))
         r
     <dbl>
 1 -0.0630
-Ex
+EX 
 circle_data <- datasaurus_dozen %>%filter(dataset == "circle")
 ggplot(data = circle_data, mapping = aes(x = x, y = y))+geom_point()
 circle_data <- datasaurus_dozen %>%filter(dataset == "circle")
